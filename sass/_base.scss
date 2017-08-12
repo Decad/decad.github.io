@@ -1,0 +1,11 @@
+@import "base/normalize";
+@import "base/general";
+
+.code > pre {
+  padding: 0;
+  margin: 0;
+}
+
+.code .gutter {
+ display: none;
+}
