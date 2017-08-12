@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Declan Cook]]></title>
-  <link href="http:///atom.xml" rel="self"/>
-  <link href="http:///"/>
-  <updated>2017-08-12T17:31:50+01:00</updated>
-  <id>http:///</id>
+  <link href="http://declancook.com/atom.xml" rel="self"/>
+  <link href="http://declancook.com/"/>
+  <updated>2017-08-12T17:36:39+01:00</updated>
+  <id>http://declancook.com/</id>
   <author>
     <name><![CDATA[Declan Cook]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Save .json files from chrome developer tools]]></title>
-    <link href="http:///save-json-file-from-chrome-developer-tools/"/>
+    <link href="http://declancook.com/save-json-file-from-chrome-developer-tools/"/>
     <updated>2017-08-07T23:16:01+01:00</updated>
-    <id>http:///Console-save</id>
+    <id>http://declancook.com/Console-save</id>
     <content type="html"><![CDATA[<p>I spend a lot of my time inside of chrome developer tools and using the javascript console trying things out and testing various things I am working on. The other day I wanted to persist some data that I had built up while playing around in chrome javascript console but I couldn&rsquo;t find an easy way other than <code>JSON.stringify</code> and copy&amp;paste. So I decided to extend the global <a href="https://developer.mozilla.org/en/docs/Web/API/console">console</a> object to include a <code>save</code> method that would save any object I passed to it as a json file. Here is the code I wrote:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
