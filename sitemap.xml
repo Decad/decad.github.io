@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://declancook.com/efficiently-detecting-when-an-element-changes-size</loc>
+<lastmod>2017-08-20T12:36:49+01:00</lastmod>
+</url>
+<url>
 <loc>http://declancook.com/save-json-file-from-chrome-developer-tools/</loc>
 <lastmod>2017-08-07T23:16:01+01:00</lastmod>
 </url>
 <url>
-<loc>http://declancook.com/blog/archives/</loc>
+<loc>http://declancook.com/archives/</loc>
 </url>
 <url>
-<loc>http://declancook.com/archives/</loc>
+<loc>http://declancook.com/blog/archives/</loc>
 </url>
 <url>
 <loc>http://declancook.com/blog/</loc>
 </url>
 <url>
 <loc>http://declancook.com/</loc>
+</url>
+<url>
+<loc>http://declancook.com/blog/categories/html/</loc>
+</url>
+<url>
+<loc>http://declancook.com/blog/categories/js/</loc>
+</url>
+<url>
+<loc>http://declancook.com/blog/categories/fed/</loc>
 </url>
 </urlset>

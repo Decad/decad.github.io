@@ -5,11 +5,11 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta charset="utf-8">
-	<title>Declan Cook</title>
+	<title>Efficiently Detecting When An Element Changes Size | Declan Cook</title>
 
 	<meta name="author" content="Declan Cook">
 	
-	<meta name="description" content="20 Aug 2017 Efficiently Detecting When an Element Changes Size While working on MediaFaker, an experimental idea for displaying the effects of media &hellip;">
+	<meta name="description" content="Declan Cook 20 Aug 2017 Efficiently Detecting When an Element Changes Size While working on MediaFaker, an experimental idea for displaying the &hellip;">
 
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="MobileOptimized" content="320" />
@@ -35,36 +35,16 @@
 </head>
 
 
-<body class="home-template">
-  <header id="site-head">
-  <div class="vertical">
-    <div id="site-head-content" class="inner">
-      <h1 class="blog-title"><a class="no-rollover" href="/">Declan Cook</a></h1>
-      <h2 class="blog-description">Software Developer</h2>
-    </div>
-  </div>
-</header>
-  <main class="content" role="main">
-    
-
-
-
+<body class="post-template">
+  <main class="content" role="main"><article class="post">
   
-    <article class="post">
-      
-	
-		
-	
 	<header class="post-header">
-		<span class="post-meta">20 Aug 2017</span>
-		<h2 class="post-title">
-			
-			<a href="/efficiently-detecting-when-an-element-changes-size">
-			
-				Efficiently Detecting When an Element Changes Size</a>
-		</h2>
+		<a id="blog-logo" href="/">Declan Cook</a>
 	</header>
-	<section class="post-excerpt">
+	<span class="post-meta">20 Aug 2017</span>
+	<h1 class="post-title">Efficiently Detecting When an Element Changes Size</h1>
+
+	<section class="post-content">
 		<p>While working on <a href="https://github.com/Decad/MediaFaker">MediaFaker</a>, an experimental idea for displaying the effects of media queries inside any DOM node without the use of iframes, I needed a method of detecting when an element changes size. My initial thoughts lead me to a pretty naive solution involving <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a>.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -143,100 +123,32 @@
 
 	</section>
 
-    </article>
+  <footer class="post-footer">
+  <section class="author">
+    <h4>Declan Cook</h4>
+    <p></p>
+  </section>
+  <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=Efficiently Detecting When An Element Changes Size&amp;url=http://declancook.com/efficiently-detecting-when-an-element-changes-size" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://declancook.com/efficiently-detecting-when-an-element-changes-size" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://declancook.com/efficiently-detecting-when-an-element-changes-size" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+    </a>
+  </section>
+</footer>
+  <hr>
+  
+    <div class="share">
+</div>
 
   
-    <article class="post">
-      
-	
-	<header class="post-header">
-		<span class="post-meta">07 Aug 2017</span>
-		<h2 class="post-title">
-			
-			<a href="/save-json-file-from-chrome-developer-tools/">
-			
-				Save .json Files From Chrome Developer Tools</a>
-		</h2>
-	</header>
-	<section class="post-excerpt">
-		<p>I spend a lot of my time inside of chrome developer tools and using the javascript console trying things out and testing various things I am working on. The other day I wanted to persist some data that I had built up while playing around in chrome javascript console but I couldn&rsquo;t find an easy way other than <code>JSON.stringify</code> and copy&amp;paste. So I decided to extend the global <a href="https://developer.mozilla.org/en/docs/Web/API/console">console</a> object to include a <code>save</code> method that would save any object I passed to it as a json file. Here is the code I wrote:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">console</span><span class="p">){</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">save</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">filename</span><span class="p">){</span>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Console.save: No data&#39;</span><span class="p">)</span>
-</span><span class='line'>      <span class="k">return</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">filename</span><span class="p">)</span> <span class="nx">filename</span> <span class="o">=</span> <span class="s1">&#39;console.json&#39;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">data</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span><span class="nx">object</span><span class="s2">&quot;&quot;</span><span class="p">){</span>
-</span><span class='line'>      <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="nx">data</span><span class="p">],</span> <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;text/json&#39;</span><span class="p">}),</span>
-</span><span class='line'>        <span class="nx">e</span>    <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span><span class="p">(</span><span class="s1">&#39;MouseEvents&#39;</span><span class="p">),</span>
-</span><span class='line'>        <span class="nx">a</span>    <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="nx">a</span><span class="p">.</span><span class="nx">download</span> <span class="o">=</span> <span class="nx">filename</span>
-</span><span class='line'>    <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">a</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">downloadurl</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;text/json&#39;</span><span class="p">,</span> <span class="nx">a</span><span class="p">.</span><span class="nx">download</span><span class="p">,</span> <span class="nx">a</span><span class="p">.</span><span class="nx">href</span><span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">e</span><span class="p">.</span><span class="nx">initMouseEvent</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span>
-</span><span class='line'>                     <span class="nb">window</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
-</span><span class='line'>                     <span class="kc">false</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">null</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">a</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">})(</span><span class="nx">console</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But I didn&rsquo;t feel like copy and pasting this code into my console every time I wanted to use it. So I threw together a chrome extension to inject this code into every page. I put all this code up on <a href="https://github.com/Decad/Console.save">github</a> check it out.</p>
-
-<p>If you found this method useful Console.save is now part of <a href="https://github.com/bgrins/devtools-snippets">devtools-snippets</a> which contains even more useful snippets for chromes developer tools.</p>
-
-	</section>
-
-    </article>
-
-
-<nav class="pagination" role="pagination">
   
-
-  <span class="page-number">
-    Page 1 of 1
-  </span>
-
-  
-</nav>
-
-
-  </main>
+</article></main>
   <footer class="site-footer"><a class="subscribe icon-feed" href="http://declancook.com/atom.xml"><span class="tooltip">Subscribe!</span></a>
 
 
