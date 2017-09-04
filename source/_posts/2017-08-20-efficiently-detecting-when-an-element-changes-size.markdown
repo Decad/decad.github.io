@@ -39,8 +39,13 @@ What I wanted was a method that wouldn't require the use of `requestAnimationFra
 The method that the ResizeSensor uses works by adding hidden children to the element.
 
 ```HTML
-<div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
-    <div style="position: absolute; left: 0px; top: 0px; transition: 0s; width: 10000px; height: 10000px;"></div>
+<div class="resize-sensor" style="position: absolute;
+                                  left: 0px; top: 0px; right: 0px; bottom: 0px;
+                                  overflow: hidden; z-index: -1; visibility: hidden;">
+    <div style="position: absolute;
+                left: 0px; top: 0px; 
+                transition: 0s;
+                width: 10000px; height: 10000px;"></div>
 </div>
 ```
 
